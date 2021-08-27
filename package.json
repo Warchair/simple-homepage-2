@@ -1,0 +1,24 @@
+{
+  "name": "simple-homepage-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwind build -i ./src/css/style.css -o ./public/css/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warchair/simple-homepage-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Warchair/simple-homepage-2/issues"
+  },
+  "homepage": "https://github.com/Warchair/simple-homepage-2#readme",
+  "dependencies": {
+    "autoprefixer": "^10.3.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.8"
+  }
+}
