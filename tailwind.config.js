@@ -7,6 +7,10 @@ module.exports = {
         'inter':'Inter',
         'open-sans':'Open Sans',
         'poppins':'Poppins'
+      },
+      colors: {
+        'green-blue':'#ADE5E5',
+        'blue-dark': '#12294B'
       }
     },
   },
