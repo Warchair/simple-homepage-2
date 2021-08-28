@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,27 +16,27 @@
 </head>
 <body class="bg-gray-100 overflow-x-hidden">
     <!-- navbar code -->
-    <nav class="font-poppins">
+    <nav class="font-poppins" id="nav">
         <div class="px-4">
             <div class="flex md:flex-row flex-col md:justify-between md:items-center">
                 <div class="flex justify-between items-center py-2">
                     <div>
                         <img class="w-3/4" src="./image/logo.png" alt="">
                     </div>
-                    <div class="md:hidden block">
+                    <button class="md:hidden block" id="menunav">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                           </svg>
-                    </div>
+                    </button>
                 </div>
-                <div class="md:flex hidden md:flex-row flex-col md:mt-3">
+                <div class="flex md:block hidden md:flex-row flex-col md:mt-3 menulist">
                     <a href="" class="md:py-0 py-3 ">Home</a>
                     <a href="" class="md:py-0 py-3 md:ml-4">Abous Us</a>
                     <a href="" class="md:py-0 py-3 md:ml-4">Courses</a>
                     <a href="" class="md:py-0 py-3 md:ml-4">Apparentiships</a>
                     <a href="" class="md:py-0 py-3 md:ml-4">More</a>
                 </div>
-                <div class=" md:flex hidden md:flex-row flex-col gap-3 md:pb-0 pt-2 pb-2">
+                <div class="flex md:block hidden md:flex-row flex-col gap-3 md:pb-0 pt-2 pb-2 menulist">
                     <button class="py-2 px-6">Sign In</button>
                     <button class="py-2 px-6 bg-blue-400 text-white">Login</button>
                 </div>
@@ -351,6 +351,43 @@
                 </div>
                 <!-- end footer  -->
             </div>
+
+            <div class="md:px-8 md:py-8 px-4 py-4 fixed bottom-0 right-0 cursor-pointer">
+                <div class="sticky px-2 py-2 rounded-md bg-gray-700 opacity-90 shadow-xl">
+                    <svg class="md:w-8 md:h-8 w-7 h-7  text-white" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M14,20H10V11L6.5,14.5L4.08,12.08L12,4.16L19.92,12.08L17.5,14.5L14,11V20Z" />
+                    </svg>
+                </div>
+            </div>
+
         </div>
+        <script>
+            let menunav = document.querySelector('#menunav');
+            let sticky = document.querySelector('.sticky');
+            let pagescroll = document.querySelectorAll('.page-scroll');
+            let nav = document.querySelector('#nav');
+            let menulist = document.querySelectorAll('.menulist');
+
+            menunav.addEventListener("click", function() {
+                menulist.forEach(function(e) {
+                    e.classList.toggle('hidden');
+                })
+            })
+
+            // window.addEventListener("scroll", function() {
+            //     let scrolled =  document.scrollingElement.scrollTop;
+            //     if(scrolled > 0) {
+            //         nav.classList.add('bg-gray-50');
+            //     } else {
+            //         nav.classList.remove('bg-gray-50');
+            //     }
+            // })
+
+
+            sticky.addEventListener('click', function(e) {
+                window.scrollTo(0,0);
+                e.preventDefault();
+            })
+        </script>
 </body>
 </html>
